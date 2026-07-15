@@ -1,0 +1,188 @@
+.fadeIn{
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+
+.fadeOut{
+
+    animation:fadeOut .8s ease forwards;
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+
+.menuButton{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.menuButton::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.menuButton:hover::after{
+
+    left:100%;
+
+}
+
+
+#spaceWindow{
+
+    animation:windowPulse 8s infinite ease-in-out;
+
+}
+
+
+@keyframes windowPulse{
+
+    0%{
+
+        box-shadow:
+        inset 0 0 20px rgba(70,180,255,.08);
+
+    }
+
+
+    50%{
+
+        box-shadow:
+        inset 0 0 45px rgba(70,180,255,.18);
+
+    }
+
+
+    100%{
+
+        box-shadow:
+        inset 0 0 20px rgba(70,180,255,.08);
+
+    }
+
+}
+
+
+.hyperEffect{
+
+    animation:hyperGlow .8s infinite alternate;
+
+}
+
+
+@keyframes hyperGlow{
+
+    from{
+
+        filter:brightness(1);
+
+    }
+
+
+    to{
+
+        filter:brightness(1.8);
+
+    }
+
+}
+
+
+.systemActive{
+
+    animation:systemBlink 2s infinite;
+
+}
+
+
+@keyframes systemBlink{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+
+    50%{
+
+        opacity:.5;
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
